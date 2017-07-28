@@ -1,6 +1,8 @@
 # Vitaprint Methods
 
-This repository containst files and descriptions for building a stepper-motor powered syringe extruder, which can be mounted on a general use CNC system. Feel free to fork and comment and if you have any questions, you [contact us](mailto:banovic@irnas.eu) directly. Contained in the repository you will find design files, a bill of materials, assembly instructions and extrusion calibration. To use the extruder within a CNC system, you will require CNC control electronics and software, which we do not provide. At Symbiolab the extruder was tested with [PlanetCNC](https://planet-cnc.com/).
+This repository containst files and protocols for bio-fabrication methods developed and tested by Symbiolab Vitaprint team. Contained in the repository you will find design files, demo files, working procedures etc.
+
+We are available for discussion via [e-mail](mailto:banovic@irnas.eu). 
 
 ## License <a id="license"></a>
 
