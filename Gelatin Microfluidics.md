@@ -6,7 +6,7 @@ This protocol is a modification of the freeform reversible embedding of suspende
 The FRESH method for the preparation of the gelatine matrix, which allows precise deposition of material inside a gelatin matrix, and consequently the fabrication of almost any shape or form, has been adapted after Hinton et al. 2015. The method was already shown to produce vascular tissues, our adaptation however, gives higher control over the resolution of the matrix and consequently allows for the fabrication of thinner vessels (internal diameter as low as 210μm). 
 
 ## Workflow
-
+https://user-images.githubusercontent.com/14543226/28706272-d824b230-7373-11e7-9c01-42fccb26888b.png
 ## Equipment and Tools
 
 ## Chemicals
