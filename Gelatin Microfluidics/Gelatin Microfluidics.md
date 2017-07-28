@@ -15,7 +15,7 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 
 
 ## Workflow <a id="WORK"></a>
-<img src="https://user-images.githubusercontent.com/14543226/28706272-d824b230-7373-11e7-9c01-42fccb26888b.png" alt="table" width="150" height="450">
+<img src="https://user-images.githubusercontent.com/14543226/28712000-c20bfe16-7389-11e7-9f17-86d3e43277be.png" width="150" height="600">
 
 ## Equipment and Tools <a id="EQUIP"></a>
 - Laser cutter (4mm plexi glass)
