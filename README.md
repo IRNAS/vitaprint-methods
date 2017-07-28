@@ -2,6 +2,8 @@
 
 This repository containst files and protocols for bio-fabrication methods developed and tested by Symbiolab Vitaprint team. Contained in the repository you will find design files, demo files, working procedures etc.
 
+All -py files were written in Python 3.X. We cannot guarantee functionality of the code in older versions.
+
 We are available for discussion via [e-mail](mailto:banovic@irnas.eu). 
 
 ## License <a id="license"></a>
