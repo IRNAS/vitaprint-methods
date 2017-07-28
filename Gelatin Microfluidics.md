@@ -15,7 +15,7 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 
 
 ## Workflow <a id="WORK"></a>
-<img src="https://user-images.githubusercontent.com/14543226/28706272-d824b230-7373-11e7-9c01-42fccb26888b.png" alt="table" width="300" height="600">
+<img src="https://user-images.githubusercontent.com/14543226/28706272-d824b230-7373-11e7-9c01-42fccb26888b.png" alt="table" width="200" height="600">
 
 ## Equipment and Tools <a id="EQUIP"></a>
 - Laser cutter (4mm plexi glass)
@@ -43,6 +43,14 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 ## Procedure <a id="PROCEDURE"></a>
 
 ### Step 1: Mould Building
+
+1. Laser cut the mould out of plexiglass/acrylic plastic (file filename).
+2. Drill the inlet and outlet holes using a CNC mill (file filename).
+3. Seal the bottom with waterproof tape
+
+<img src="https://user-images.githubusercontent.com/14543226/28706742-cf21a678-7375-11e7-9848-f72e33ddacc5.jpg" alt="table" width="300" height="600">
+Picture 1: Finished mould, sealed with waterproof tape
+
 
 ### Step 2: Filament Preparation
 
