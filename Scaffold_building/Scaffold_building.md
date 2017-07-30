@@ -68,6 +68,13 @@ Once the settings are adjusted, the g-code can be generated and run via CNC cont
 ### Post-processing
 After printing the scaffolds are transferred to a 10mM CaCl₂ solution to cross-link the alginate. In this manner they become stable during heating and when soaked into sterilization liquids (e.g. 70% alcohol).
 
+![gelatin_algi](https://user-images.githubusercontent.com/17159617/28752369-5a1de374-751d-11e7-9e8f-f52496a5a8d3.jpg)
+Figure 1: Simple gelatin-alginate woodpile scaffold, generated using the python g-code generator.
+
+![gelalgi_nose](https://user-images.githubusercontent.com/17159617/28752372-5eb619d8-751d-11e7-98cb-d4af3b2cfd00.jpg)
+Figure 2: Nose scaffold from the gelatin-alginate composite. G-code generated using attached Slic3r settings.
+
+
 ## Gluten <a id="GLUTEN"></a>
 Gluten is a protein often found in cereal grains, especially wheat and is a common waste product in food production. Though there is more (food related) discussion about this material now, it has been known for centuries and was traditionally used as a glue. It is not only a good adhesive, but also its mechanical properties can be adjusted by modifying the polymer chains, making it either soft and elastic, or stiff as glass. Therefore it may become a very interesting component for digital manufacturing.
 
@@ -90,3 +97,9 @@ In our experiments printing took place at 20-21°C ambient temperature. Printing
 
 ### Post-processing
 Printed gluten scaffolds do not require extraordinary post-processing, as the structures become stable after drying. In this regard it is important to note, that a slow and even drying process is vital to prevent post-printing deformations of the structure. Woodpile scaffolds are easy to dry. They are placed into a petri dish with a few drops of water and loosely covered for at least two days.
+
+![gluten](https://user-images.githubusercontent.com/17159617/28752373-620f7106-751d-11e7-8425-ce7338beaf13.jpg)
+Figure 3: Simple woodpile scaffold from gluten.
+
+## Samples
+In the repository you will find g-code demo files, as well as Slic3r setting files for the gelatin-alginate nose scaffold.
