@@ -10,8 +10,6 @@ We have prepared a simple python-based algorithm to simplify the generation of g
 - [General materials and tools](#MAT)
 - [Gelatin-alginate](#GELALG)
 - [Gluten](#GLUTEN)
-- [Notes and Tips](#TIPS)
-- [References](#REF)
 
 
 ## Workflow <a id="WORK"></a>
