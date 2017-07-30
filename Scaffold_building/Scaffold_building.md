@@ -7,98 +7,88 @@ We have prepared a simple python-based algorithm to simplify the generation of g
 
 ## Table of Contents
 - [Workflow](#WORK)
-- [Equipment and Tools](#EQUIP)
-- [Chemicals](#CHEM)
-- [Procedure](#PROCEDURE)
+- [General materials and tools](#MAT)
+- [Gelatin-alginate](#GELALG)
+- [Gluten](#GLUTEN)
 - [Notes and Tips](#TIPS)
 - [References](#REF)
 
 
 ## Workflow <a id="WORK"></a>
+![scaffold_fabrication](https://user-images.githubusercontent.com/17159617/28751961-8f8d0494-7514-11e7-8fc4-a5a56167933f.png)
 
-
-## Equipment and Tools <a id="EQUIP"></a>
-- Laser cutter (4mm plexi glass)
-- CNC mill (1mm drill, chamfering drill)
-- waterproof tape + scissors
-- Vitaprint extruder mounted on a CNC system
-- 5mL Syringes
-- gauge needles (G21 or G27)
-- magnetic stirrer + magnet
-- pipette
-- fridge
-- heat block or chamber
-- beakers
-- paper towels
-- pen ink
-
-
-## Chemicals <a id="CHEM"></a>
-- gelatine from porcine skin (Sigma-Aldrich)
-- xanthan (Herbana)
-- CaCl2 (Sigma-Aldrich)
-- pen ink (Pelikan 4001)
+## General materials and tools <a id="MAT"></a>
 - distilled water
+- glass beakers
+- magnetic stirrer + rods
+- microwave oven
+- 5ml syringes
+- blunt-end gauge needles (G21 or G27)
+- Vitaprint extruder mounted on a CNC system
 
-## Procedure <a id="PROCEDURE"></a>
+Printing materials
+Here we describe the preparation of two scaffold materials:
+A) A gelatin-alginate composite for tissue engineering
+B) Gluten - a highly viscous material and a very affordable adhesive component
 
-### Step 1: Mould Building
+## Gelatin-alginate <a id="GELALG"></a>
+Gelatin is a the thermal degradation product of collagen and is typically obtained by cooking animal connective tissues, of which collagen is the main component. Due to its origin, gelatin can mimick the composition of the average extracellular matrix well. It exhibits thermal gelation, thus a hydrogel made from gelatin can be used for manufacturing by heating (melting) and cooling (gelation). This is very handy for printing, however, the material itself is not stable at cell culture conditions (37°C) and will require post-processing by additional cross-linking when used for this purpose. This can be achieved by different approaches, either by using gultaraldehyde (very toxic, requires rigorous rinsing), transglutaminases, N-(3-dimethylaminopropyl)-N′-ethylcarbodiimide, etc.
 
-1. Laser cut the mould out of plexiglass/acrylic plastic (file filename).
-2. Drill the inlet and outlet holes using a CNC mill (file filename).
-3. Seal the bottom with waterproof tape
+Alginate is a polysaccharide found in brown algae and exhibits ionic cross-linking by interacting with calcium ions while in solution. When blended together with gelatin it gives mechanical stability to the structure when cross-linked. The polymer chains are however loosened significantly when in a natrium ion rich medium, which is common for cell-culture media.
 
-<img src="https://user-images.githubusercontent.com/14543226/28706742-cf21a678-7375-11e7-9848-f72e33ddacc5.jpg" alt="table" width="400" height="300">
-Picture 1: Finished mould, sealed with waterproof tape
+### Specific materials
+- Gelatin from porcine skin (Sigma-Aldrich)
+- Sodium alginate (Sigma-Aldrich)
+- Calcium Chloride (Sigma-Aldrich)
 
+### Preparation of the composite
+The printing material is composed of a 10% gelatin (w/w) and 1% alginate (w/w) in water and is prepared in the following manner for 20ml of printing material:
 
-### Step 2: Filament Preparation
-1. Prepare a 0.5% w/w xanthan solution by adding xanthan to distilled water in a beaker. 
-2. Stir with magnetic stirrer for at least 6h. Make sure all bubbles are removed and the xanthan solution is fully homogenized. This ensures a consistent print.
-4. Add ink (3 drops / 20 mL) and homogenize with magnetic stirrer. This helps with channel perfusability.
-5. The solution can be stored for ~ 2 weeks at 6°C.
+1. 18.8 ml of water are transferred to a beaker and rigorously mixed on a magnetic stirrer.
+2. Very slowly and carefully, 0.2g of alginate are added to avoid the formation of lumps.
+3. 2g of gelatin are added in the same manner and the mix is stirred for additional 5-10 min for the gelatin to soak in the solution.
+4. The mixture is heated in a microwave and the heating is stopped immediately after the boiling point is reached.
+5. The mixture is stirred for one more minute.
+6. The beaker is placed in a vacuum desiccator to remove bubbles from the solution.
+7. The solution is loaded into a 5ml syringe and mounted on the preheated extruder where it is let to reach printing temperature (at least 30min).
 
-### Step 3: Matrix Formation (adapted from Hinton et al., 2015)
-1. Grind up gelatine in a coffee grinder for 5-10 min and sieve it through a < 140 µ mesh. Mesh sizes can be adjusted according to the needed smoothness of the matrix.
-2. In a beaker, prepare a 5% gelatine solution in 50 mM CaCl2. Add the gelatine slowly to prevent lump formation (lumps can cause inconsistencies in the print). The 50 mM CaCl2 solution needs to be prepared with distilled water and freshly every day.
-3. Mix the gelatine solution on the magnetic stirrer for ~15 min, until the gelatine has soaked and all the lumps have dissolved.
-4. Wait until the undissolved gelatine has set (picture 2), remove the supernatant and add the same amount of fresh 50 mM CaCl2 solution.
+### Print settings and conditions
+The settings for printing vary slightly, depending on the nozzle. Print settings for blunt-end G21 and G27 needles are shown in the table below and were determined experimentally at 20-22°C ambient temperature and for printed structures with a layer height equal to the nozzle diameter.
 
-<img src="https://user-images.githubusercontent.com/14543226/28706841-447cb368-7376-11e7-8706-8f426c26a426.png" alt="table" width="400" height="400">
-Picture 2: Layer of set gelatine.
+|     nozzle     | F [mm/min] | E [mm/10mm of path] | T [°C] |
+|:--------------:|:----------:|:-------------------:|:------:|
+| G21 (0.4mm ID) |   100-400  |         0.04        |  27-29 |
+| G27 (0.2mm ID) |   100-400  |         0.01        |  28-29 |
 
-5. Mix the gelatine solution on the magnetic stirrer for 2 min, then repeat the procedure under 4.) 1-2 more times (the supernatant has to be clear, not yellowish).
-6. Remove excess liquid from the gelatine with a paper towel. An optimal gelatine slurry consistency is such, that upon tilting the beaker, the gelatine slurry moves very slowly, but does not stay still. 50 mM CaCl2 can be added, if too much liquid was removed previously.
-7. Use a needle to fill the inlet and the outlet of the mould with the xanthan solution and pour the gelatine slurry into the mould.
+Once the settings are adjusted, the g-code can be generated and run via CNC controller. We use PlanetCNC USB controller (https://planet-cnc.com/support/), as it allows extensive manual control. It is important to note that the user should be well versed in using his CNC system.
 
-### Step 4: Printing the Filament
-1. Fill the syringe with 0.5% xanthan, making sure there are no air bubbles. Screw on the needle (we used G21 or G27 needles with 0.51 mm and 0.21 mm inner diameters, respectively) .
-2. Mount the syringe onto the extruder.
-3. Position the mould on the printer, so that X0 Y0 Z0 is in the lower left corner of the top face.
+### Important guidelines
+- Before printing, decide on the surface/container where the print should take place (e.g. petri dish).
+- After mounting the syringe and the nozzle, determine the (x,y,z) = (0,0,0) position. The z position is especially important and should lie approximately 1 layer height above the surface.
+- Before running the g-code, enough material should be extruded from the syringe to reach the tip of the nozzle. This can be done manually, but we recomment it be pre-programmed in the g-code by adding skirts.
 
-<img src="https://user-images.githubusercontent.com/14543226/28706918-8efe77aa-7376-11e7-9654-e5d538319f21.png" alt="table" width="400" height="250">
-Picture 3: Mould scheme, indicating print starting point, thickness and inlet/outlet diameter
+### Post-processing
+After printing the scaffolds are transferred to a 10mM CaCl₂ solution to cross-link the alginate. In this manner they become stable during heating and when soaked into sterilization liquids (e.g. 70% alcohol).
 
-4. Start the print.
+## Gluten <a id="GLUTEN"></a>
+Gluten is a protein often found in cereal grains, especially wheat and is a common waste product in food production. Though there is more (food related) discussion about this material now, it has been known for centuries and was traditionally used as a glue. It is not only a good adhesive, but also its mechanical properties can be adjusted by modifying the polymer chains, making it either soft and elastic, or stiff as glass. Therefore it may become a very interesting component for digital manufacturing.
 
-### Step 5: Post-Print Procedure
-1. Right after the print, wait a few minutes for the xanthan to fully crosslink (darker edges and a lighter inside can be seen - picture 4).
+### Specific materials
+- gluten (Buxtrade GmbH)
+- citric acid (optional, for modifying viscosity)
 
-<img src="https://user-images.githubusercontent.com/14543226/28706993-e0d0ea22-7376-11e7-903f-555d6acc9a44.png" alt="table" width="400" height="400">
-Picture 4: Before (LEFT) and after (RIGHT) xanthan crosslinking.
+### Preparation of the material
+1. 5.5g of gluten granules are soaked in 4.5ml of water overnight (or for at least 6 hours).
+2. The soaked material is heated to 60°C in a water bath and stirred until smooth.
+3. The gluten solution is loaded into the syringe and mounted onto the extruder, which is preheated to 50°C and let to reach printing temperature (at least 30min).
 
-2. For the crosslinking of gelatine, heat the print for ~ 5 min to 30°C and then to 42°C, until all the gelatine has completely melted.
-3. Cool the print at room temperature (maximum 24°C - it will not solidify enough otherwise), for a minimum of 0.5 h (if the gelatine cools too fast, there is not enough time for it to gel). Once cooled enough for the filament to be stable, cool in the fridge (~6°C) until the gelation fully solidifies.
-4. To start perfusion through the printed channel, firstly gently clean the channels in the mould with a needle (G21 - G27), then slowly inject a small amount of pure ink on one side and keep injecting if the ink flows through the channels. Otherwise, gently push the syringe piston up and down (like "simulating a heart"), watching that the channel does not burst.
+### Print settings and conditions
+Being extremely viscous and solidifying depending on temperature, clogging of the nozzle can happen very easily. Printing with a G21 (0.4mm ID) needle requires a rapid extrusion of 2.5mm with a feedrate of 100mm/min, immediately before printing. Our experimentally determined printing parameters were as follows:
+E = 0.4mm/10mm of path
+F = 400-600mm/min
+h (layer height) = 0.3mm
 
-VIDEO
+In our experiments printing took place at 20-21°C ambient temperature. Printing guidelines should be followed as described above.
 
-## Notes and Tips <a id="TIPS"></a>
-You can use this method to fabricate perfusable channels in any mould. Moulds can be designed and manufactured in different ways (such as 3D printed, CNC-milled etc.). Make sure your xanthan trace starts at the inlet and ends at an outlet. 
-
-- sharp edges in the channel trajectory disrupt the ink flow
-- ...
-
-## References <a id="REF"></a>
-1. Hinton, T., Jallerat, Q., Palchesko, R., Park, J., Grodzicki, M., Shue, H., Ramadan, M., Hudson, A. and Feinberg, A. (2015). Three-dimensional printing of complex biological structures by freeform reversible embedding of suspended hydrogels. Science Advances, 1(9), pp.e1500758-e1500758
-
+### Post-processing
+Printed gluten scaffolds do not require extraordinary post-processing, as the structures become stable after drying. In this regard it is important to note, that a slow and even drying process is vital to prevent post-printing deformations of the structure. Woodpile scaffolds are easy to dry. They are placed into a petri dish with a few drops of water and loosely covered for at least two days.
