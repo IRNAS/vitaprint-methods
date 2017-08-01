@@ -10,6 +10,11 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 - [Equipment and Tools](#EQUIP)
 - [Chemicals](#CHEM)
 - [Procedure](#PROCEDURE)
+  * [Step 1: Mould Building](#step1)
+  * [Step 2: Filament Preparation](#step2)
+  * [Step 3: Matrix Formation](#step3)
+  * [Step 4: Printing the Filament](#step4)
+  * [Step 5: Post-Print Procedure](#step5)
 - [Notes and Tips](#TIPS)
 - [References](#REF)
 
@@ -42,7 +47,7 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 
 ## Procedure <a id="PROCEDURE"></a>
 
-### Step 1: Mould Building
+### Step 1: Mould Building <a id="step1"></a>
 
 1. Laser cut the mould out of plexiglass/acrylic plastic (file filename).
 2. Drill the inlet and outlet holes using a CNC mill (file filename).
@@ -52,13 +57,13 @@ The FRESH method for the preparation of the gelatine matrix, which allows precis
 Picture 1: Finished mould, sealed with waterproof tape
 
 
-### Step 2: Filament Preparation
+### Step 2: Filament Preparation <a id="step2"></a>
 1. Prepare a 0.5% w/w xanthan solution by adding xanthan to distilled water in a beaker. 
 2. Stir with magnetic stirrer for at least 6h. Make sure all bubbles are removed and the xanthan solution is fully homogenized. This ensures a consistent print.
 4. Add ink (3 drops / 20 mL) and homogenize with magnetic stirrer. This helps with channel perfusability.
 5. The solution can be stored for ~ 2 weeks at 6°C.
 
-### Step 3: Matrix Formation (adapted from Hinton et al., 2015)
+### Step 3: Matrix Formation (adapted from Hinton et al., 2015) <a id="step3"></a>
 1. Grind up gelatine in a coffee grinder for 5-10 min and sieve it through a < 140 µ mesh. Mesh sizes can be adjusted according to the needed smoothness of the matrix.
 2. In a beaker, prepare a 5% gelatine solution in 50 mM CaCl2. Add the gelatine slowly to prevent lump formation (lumps can cause inconsistencies in the print). The 50 mM CaCl2 solution needs to be prepared with distilled water and freshly every day.
 3. Mix the gelatine solution on the magnetic stirrer for ~15 min, until the gelatine has soaked and all the lumps have dissolved.
@@ -71,7 +76,7 @@ Picture 2: Layer of set gelatine.
 6. Remove excess liquid from the gelatine with a paper towel. An optimal gelatine slurry consistency is such, that upon tilting the beaker, the gelatine slurry moves very slowly, but does not stay still. 50 mM CaCl2 can be added, if too much liquid was removed previously.
 7. Use a needle to fill the inlet and the outlet of the mould with the xanthan solution and pour the gelatine slurry into the mould.
 
-### Step 4: Printing the Filament
+### Step 4: Printing the Filament <a id="step4"></a>
 1. Fill the syringe with 0.5% xanthan, making sure there are no air bubbles. Screw on the needle (we used G21 or G27 needles with 0.51 mm and 0.21 mm inner diameters, respectively) .
 2. Mount the syringe onto the extruder.
 3. Position the mould on the printer, so that X0 Y0 Z0 is in the lower left corner of the top face.
@@ -81,7 +86,7 @@ Picture 3: Mould scheme, indicating print starting point, thickness and inlet/ou
 
 4. Start the print.
 
-### Step 5: Post-Print Procedure
+### Step 5: Post-Print Procedure <a id="step5"></a>
 1. Right after the print, wait a few minutes for the xanthan to fully crosslink (darker edges and a lighter inside can be seen - picture 4).
 
 <img src="https://user-images.githubusercontent.com/14543226/28706993-e0d0ea22-7376-11e7-903f-555d6acc9a44.png" alt="table" width="400" height="400">
@@ -90,8 +95,6 @@ Picture 4: Before (LEFT) and after (RIGHT) xanthan crosslinking.
 2. For the crosslinking of gelatine, heat the print for ~ 5 min to 30°C and then to 42°C, until all the gelatine has completely melted.
 3. Cool the print at room temperature (maximum 24°C - it will not solidify enough otherwise), for a minimum of 0.5 h (if the gelatine cools too fast, there is not enough time for it to gel). Once cooled enough for the filament to be stable, cool in the fridge (~6°C) until the gelation fully solidifies.
 4. To start perfusion through the printed channel, firstly gently clean the channels in the mould with a needle (G21 - G27), then slowly inject a small amount of pure ink on one side and keep injecting if the ink flows through the channels. Otherwise, gently push the syringe piston up and down (like "simulating a heart"), watching that the channel does not burst.
-
-VIDEO
 
 ## Notes and Tips <a id="TIPS"></a>
 You can use this method to fabricate perfusable channels in any mould. Moulds can be designed and manufactured in different ways (such as 3D printed, CNC-milled etc.). Make sure your xanthan trace starts at the inlet and ends at an outlet. 
