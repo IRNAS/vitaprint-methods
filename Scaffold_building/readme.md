@@ -34,8 +34,8 @@ We have prepared a simple python-based algorithm to simplify the generation of g
 
 Printing materials
 Here we describe the preparation of two scaffold materials:
-A) A gelatin-alginate composite for tissue engineering
-B) Gluten - a highly viscous material and a very affordable adhesive component
+- A gelatin-alginate composite for tissue engineering
+- Gluten - a highly viscous material and a very affordable adhesive component
 
 ## Gelatin-alginate <a id="GELALG"></a>
 Gelatin is a the thermal degradation product of collagen and is typically obtained by cooking animal connective tissues, of which collagen is the main component. Due to its origin, gelatin can mimick the composition of the average extracellular matrix well. It exhibits thermal gelation, thus a hydrogel made from gelatin can be used for manufacturing by heating (melting) and cooling (gelation). This is very handy for printing, however, the material itself is not stable at cell culture conditions (37°C) and will require post-processing by additional cross-linking when used for this purpose. This can be achieved by different approaches, either by using gultaraldehyde (very toxic, requires rigorous rinsing), transglutaminases, N-(3-dimethylaminopropyl)-N′-ethylcarbodiimide, etc.
