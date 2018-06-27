@@ -66,10 +66,10 @@ def generate_skirt_5(file,ER,FR,size,skirt):
         
         file.write("\nG1 X{0} Y{1} F{2}".format(skirt_start, skirt_start,FR))
         file.write("\nG0 Z0")
-        skirt_move_1 = "\nG1 X{0} Y{1} E{2}".format( skirt_end, skirt_start,ER)
-        skirt_move_2 = "\nG1 X{0} Y{1} E{2}".format( skirt_end, skirt_end,ER)
-        skirt_move_3 = "\nG1 X{0} Y{1} E{2}".format( skirt_start, skirt_end, ER)
-        skirt_move_4 = "\nG1 X{0} Y{1} E{2}".format( skirt_start, skirt_start, ER)
+        skirt_move_1 = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end, skirt_start,ER)
+        skirt_move_2 = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end, skirt_end,ER)
+        skirt_move_3 = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start, skirt_end, ER)
+        skirt_move_4 = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start, skirt_start, ER)
         file.write(skirt_move_1)
         file.write(skirt_move_2)
         file.write(skirt_move_3)
@@ -92,10 +92,10 @@ def generate_skirt_10(file,ER,FR,size,skirt):
         
         file.write("\nG1 X{0} Y{1} F{2}".format(skirt_start_B, skirt_start_B,FR))
         file.write("\nG0 Z0")
-        skirt_move_1b = "\nG1 X{0} Y{1} E{2}".format( skirt_end_B, skirt_start_B,ER)
-        skirt_move_2b = "\nG1 X{0} Y{1} E{2}".format( skirt_end_B, skirt_end_B,ER)
-        skirt_move_3b = "\nG1 X{0} Y{1} E{2}".format( skirt_start_B, skirt_end_B, ER)
-        skirt_move_4b = "\nG1 X{0} Y{1} E{2}".format( skirt_start_B, skirt_start_B, ER)
+        skirt_move_1b = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end_B, skirt_start_B,ER)
+        skirt_move_2b = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end_B, skirt_end_B,ER)
+        skirt_move_3b = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start_B, skirt_end_B, ER)
+        skirt_move_4b = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start_B, skirt_start_B, ER)
         file.write(skirt_move_1b)
         file.write(skirt_move_2b)
         file.write(skirt_move_3b)
@@ -118,10 +118,10 @@ def generate_skirt_7_5(file,ER,FR,size,skirt):
         
         file.write("\nG1 X{0} Y{1} F{2}".format(skirt_start_C, skirt_start_C,FR))
         file.write("\nG0 Z0")
-        skirt_move_1c = "\nG1 X{0} Y{1} E{2}".format( skirt_end_C, skirt_start_C,ER)
-        skirt_move_2c = "\nG1 X{0} Y{1} E{2}".format( skirt_end_C, skirt_end_C,ER)
-        skirt_move_3c = "\nG1 X{0} Y{1} E{2}".format( skirt_start_C, skirt_end_C, ER)
-        skirt_move_4c = "\nG1 X{0} Y{1} E{2}".format( skirt_start_C, skirt_start_C, ER)
+        skirt_move_1c = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end_C, skirt_start_C,ER)
+        skirt_move_2c = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_end_C, skirt_end_C,ER)
+        skirt_move_3c = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start_C, skirt_end_C, ER)
+        skirt_move_4c = "\nG1 X{0} Y{1} A[#<_a>+{2}]".format( skirt_start_C, skirt_start_C, ER)
         file.write(skirt_move_1c)
         file.write(skirt_move_2c)
         file.write(skirt_move_3c)
@@ -141,13 +141,13 @@ def generate_layer_A(file,gap_size, FR, ER, size):
     file.write("\n G1 X0 Y0 F{0}".format(FR))
     while n_iter < len(Ys)-1:
         
-        file.write("\n G1 X{0} Y{1:.3f} E{2}".format( size, Ys[n_iter-1],ER))
+        file.write("\n G1 X{0} Y{1:.3f} A[#<_a>+{2}]".format( size, Ys[n_iter-1],ER))
         file.write("\n G3 X{0} Y{1:.3f} I0 J{2:.2f}".format(size, Ys[n_iter], abs((Ys[n_iter]-Ys[n_iter-1])/2)))
-        file.write("\n G1 X0 Y{0:.3f} E{1}".format(Ys[n_iter], ER))
+        file.write("\n G1 X0 Y{0:.3f} A[#<_a>+{1}]".format(Ys[n_iter], ER))
         file.write("\n G2 X0 Y{0:.3f} I0 J{1:.2f}".format(Ys[n_iter+1] , abs((Ys[n_iter]-Ys[n_iter-1])/2)))
         n_iter = n_iter + 2
     
-    file.write("\n G1 X{0} Y{1} E{2}".format(size, size, ER))
+    file.write("\n G1 X{0} Y{1} A[#<_a>+{2}]".format(size, size, ER))
 
 
     
@@ -163,13 +163,13 @@ def generate_layer_B(file, gap_size, FR, ER, size):
     file.write("\n G1 X{0} Y{1}".format(size, size))
     while n_iter < len(Xs)-1:
         
-        file.write("\n G1 X{0:.3f} Y0 E{1}".format( Xs[n_iter-1], ER))
+        file.write("\n G1 X{0:.3f} Y0 A[#<_a>+{1}]".format( Xs[n_iter-1], ER))
         file.write("\n G2 X{0:.3f} Y0 I-{1:.2f} J0".format(Xs[n_iter], abs((Xs[n_iter]-Xs[n_iter-1])/2)))
-        file.write("\n G1 X{0:.3f} Y{1} E{2}".format(Xs[n_iter], size, ER))
+        file.write("\n G1 X{0:.3f} Y{1} A[#<_a>+{2}]".format(Xs[n_iter], size, ER))
         file.write("\n G3 X{0:.3f} Y{1} I-{2:.2f} J0".format(Xs[n_iter+1] , size, abs((Xs[n_iter]-Xs[n_iter-1])/2)))
         n_iter = n_iter + 2
     
-    file.write("\n G1 X{0} Y{1} E{2}".format(0, 0, ER))
+    file.write("\n G1 X{0} Y{1} A[#<_a>+{2}]".format(0, 0, ER))
 
 
 
@@ -227,7 +227,7 @@ if __name__=="__main__":
 
     file = open(fullfilename,"w")
     file.write("%")
-    file.write("\nM83")
+    # file.write("\nM83")
     
     
     d = input("FILAMENT DIAMETER [mm]: ")
@@ -243,7 +243,7 @@ if __name__=="__main__":
     FR = input("FEED RATE: ")
     FR = float(FR)
     
-    ER = input("EXTRUSION RATE: ")
+    ER = input("EXTRUSION RATE [mm/size]: ")
     ER = float(ER)
     
     input_size = input("SIZE: ")
@@ -252,7 +252,7 @@ if __name__=="__main__":
     if size != input_size:
         print("\n WARNING: The input size was rounded to closest feasible size. The print size is now {0} × {0} mm.".format(size))
 
-    N_layers = input("NUMBER OF LAYERS: ")
+    N_layers = input("NUMBER OF LAYERS (must be even number): ")
     N_layers = int(N_layers)
     
     
@@ -285,7 +285,8 @@ if __name__=="__main__":
     # layer generation
     stack_layers(file, gap_size, FR, ER, size, layer_height, N_layers) 
     # closing the file 
-    file.write("\n%")
+    file.write("\nX-5 Y-5 A[#<_a> - 0.1]")
+	file.write("\n%")
 
 file.close()
 
